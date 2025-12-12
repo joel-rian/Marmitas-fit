@@ -1,0 +1,408 @@
+/* ============================================================
+   RESET
+============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: #05040f;
+  overflow-x: hidden;
+}
+
+iframe {
+  width: 300px;
+  height: 300px;
+}
+img {
+  max-width: 100%;
+  display: block;
+  user-select: none;
+}
+
+/* ============================================================
+   UTILITÁRIOS
+============================================================ */
+h1, h2, h3 {
+  text-align: center;
+}
+
+.secao {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.titulo-secao {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* ============================================================
+   HEADER / NAVBAR
+============================================================ */
+.logo {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  border-radius: 70px;
+}
+
+.logo:hover {
+cursor: pointer;
+}
+.header {
+  background: #090814;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px #000;
+}
+
+.header nav a {
+  color: #fff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.header nav a:hover {
+  color: #ffa600;
+}
+
+/* ============================================================
+   HERO
+============================================================ */
+.hero {
+  background: url("https://i.pinimg.com/736x/f1/9e/45/f19e45fcc2df75f1a4bb7baeb2f93359.jpg")
+      no-repeat center/cover;
+  padding: 120px 20px;
+  text-align: center;
+  border-bottom: 2px solid #111;
+}
+
+.hero h1 {
+  font-size: 42px;
+  text-shadow: 0 4px 20px #000;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #ffa600;
+  padding: 12px 25px;
+  font-weight: bold;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: #ffbe33;
+}
+
+/* ============================================================
+   GRID / CARDS
+============================================================ */
+.grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 30px;
+}
+
+.card {
+  background: #0d0b18;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+.preco {
+  display: block;
+  margin: 10px 0 15px;
+  font-size: 20px;
+  color: #ffa13b;
+}
+
+.btn-pedido {
+  background: #ffa600;
+  width: 100px;
+}
+
+/* ============================================================
+   MODAL – FINAL CORRIGIDO
+============================================================ */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(3px);
+    padding: 20px;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+
+    /* controle via JS */
+    display: none;
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--card, #fff);
+    color: var(--text, #222);
+    width: 300px;
+    height: 300px;        /* ← quadrado perfeito */
+    padding: 15px;        /* ← para caber melhor */
+    border-radius: 12px;
+    margin: 60px auto;
+    position: relative;
+    overflow-y: auto;     /* evita quebrar caso o conteúdo passe */
+}
+
+
+.modal-content label {
+    display: flex; /* Alinha o conteúdo do label (input e texto) */
+    align-items: center;
+    flex-direction: row-reverse; /* Centraliza verticalmente */
+    margin: 8px 0;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #fff;
+  color: #000;
+  font-size: 15px;
+}
+
+.close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.btn-enviar-evento {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* ============================================================
+   LOCALIZAÇÃO
+============================================================ */
+.btn-local {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  
+  width: 200px;
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+footer {
+  display: flex;
+  flex-direction: column;
+  background: #090814;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 2px solid #000;
+  gap: 10px;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* centraliza horizontalmente */
+    gap: 20px;                 /* espaço entre as imagens (opcional) */
+    margin: 0 auto; 
+}
+
+img.zap {
+  width: 70px;
+  
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+img.insta {
+  width: 70px;
+ 
+  cursor: pointer;
+  transition: 0.3s;
+}
+img.zap:hover {
+  transform: scale(1.1);
+}
+
+img.insta:hover {
+  transform: scale(1.1);
+}
+
+/* ============================================================
+   CARRINHO LATERAL
+============================================================ */
+.carrinho {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 320px;
+  height: 100%;
+  background: #ffffff;
+  color: #000;
+  padding: 20px;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+.carrinho.aberto {
+  right: 0;
+}
+
+.carrinho-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.carrinho-itens {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.carrinho-item {
+  background: #eeeeee;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.carrinho-footer {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.btn-finalizar {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* BOTÃO FLUTUANTE DO CARRINHO */
+.btn-carrinho {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #3ebd38;
+  color: #fff;
+  border: none;
+  padding: 18px 22px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  z-index: 9999;
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+============================================================ */
+@media (min-width: 800px) {
+  .marmita {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   margin: 0 auto;
+   
+    width: 300px;      /* tamanho do quadrado */
+  height: 300px;     /* mesmo valor da largura */
+  object-fit: cover; /* mantém a imagem sem distorcer */
+  border-radius: 0;  /* garante bordas retas */
+  }
+  }
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 40px;
+    gap: 10px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+  }
+
+  .modal-content {
+    padding: 18px;
+  }
+}

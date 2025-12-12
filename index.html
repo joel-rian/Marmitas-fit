@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante - Sabor e Tradição</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CARRINHO LATERAL -->
+    <div id="carrinho" class="carrinho">
+        <div class="carrinho-header">
+            <h3>Seu Carrinho</h3>
+            <button class="btn-close" onclick="fecharCarrinho()">×</button>
+        </div>
+
+        <div id="carrinho-itens" class="carrinho-itens">
+            <!-- Itens adicionados aparecem aqui pelo JS -->
+        </div>
+
+        <div class="carrinho-footer">
+            <p class="total">
+                Total: <span id="carrinho-total">R$ 0,00</span>
+            </p>
+            <button class="btn btn-finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
+        </div>
+    </div>
+
+    <!-- BOTÃO FLOTANTE PARA ABRIR -->
+
+    <button id="btn-carrinho" class="btn-carrinho" onclick="abrirCarrinho()">
+        🛒
+    </button>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <img src="./img/Dona Alba.jpg" class="logo" alt="LOGO Dona Alba">
+
+        <nav>
+            <a href="#marmitas">Marmitas</a>
+            <a href="#localizacao">Localização</a>
+            <a href="#contato">Contato</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Sabor e Tradição</h1>
+        <p>Comida Regional • Marmitas • Eventos</p>
+        <button class="btn" onclick="abrirModalEvento()">Reservar Evento</button>
+    </section>
+    <!-- MODAL – AGENDAR EVENTO (COLE ABAIXO DA HERO, FORA DA SECTION) -->
+    <div id="modal-evento" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-content" role="document">
+            <button class="close" aria-label="Fechar" onclick="fecharModalEvento()">&times;</button>
+            <h2 class="titulo-modal">Agendar Evento</h2>
+
+            <form id="formulario-evento" novalidate>
+                <label for="tipo-evento">Tipo de Evento</label>
+                <select id="tipo-evento" required>
+                    <option value="">Selecione</option>
+                    <option value="aniversario">Aniversário</option>
+                    <option value="casamento">Casamento</option>
+                    <option value="surpresa">Festa Surpresa</option>
+                    <option value="corporativo">Evento Corporativo</option>
+                    <option value="reuniao">Reunião</option>
+                    <option value="formatura">Formatura</option>
+                    <option value="noivado">Noivado</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="data-evento">Data</label>
+                <input type="date" id="data-evento" required>
+
+                <label for="hora-evento">Hora</label>
+                <input type="time" id="hora-evento" required>
+
+                <label for="pessoas-evento">Nº de Pessoas</label>
+                <input type="number" id="pessoas-evento" min="1" required>
+
+                <label for="orcamento-evento">Orçamento (R$)</label>
+                <input type="number" id="orcamento-evento" min="0" step="0.01" required>
+
+                <label for="nome-organizador">Seu Nome</label>
+                <input type="text" id="nome-organizador" required>
+
+                <label for="telefone-organizador">Telefone</label>
+                <input type="tel" id="telefone-organizador" required>
+
+                <label for="email-organizador">Email (opcional)</label>
+                <input type="email" id="email-organizador">
+
+                <label for="descricao-evento">Descrição (opcional)</label>
+                <textarea id="descricao-evento" rows="3"></textarea>
+
+                <!-- exemplo de checkboxes (opcional) -->
+                <div style="margin-top:8px;">
+                    <label><input type="checkbox" name="servicos" value="Buffet"> Buffet</label>
+                    <label><input type="checkbox" name="servicos" value="Decoração"> Decoração</label>
+                    <label><input type="checkbox" name="servicos" value="DJ/Música"> DJ/Música</label>
+                </div>
+
+                <button type="submit" class="btn btn-enviar-evento" style="margin-top:12px;">Agendar</button>
+            </form>
+        </div>
+    </div>
+
+
+   <!-- MARMITAS -->
+<section id="marmitas" class="secao">
+    <h2 class="titulo-secao">Marmitas</h2>
+
+    <div class="grid">
+
+        <!-- MARMITEX M -->
+        <article class="card">
+            <img src="https://scontent.cdninstagram.com/v/t39.30808-6/438118421_18317037361182561_7766768036356388896_n.jpg?stp=dst-jpg_e35_p640x640_sh0.08_tt6&_nc_cat=105&ig_cache_key=MzM1NDA1MDY0MTgwMTE3NzQ5Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjgyOHgxNDcyLnNkci5DMyJ9&_nc_ohc=TASMsfNUA5kQ7kNvwGrqFJx&_nc_oc=Admq2l8Pa_hogO1irqDWiFvY--h_gJrjB9ICFqhrjaRNdTYxQ50SHkyZWE-QomOU1Nc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=lgD5ZBhxwOVWc3szs8A4Yg&oh=00_AfmJavJgaBR2VUvdrLSZVluMvDD-JgqtuSG4Bvlad_bgaQ&oe=69416C52"
+                class="marmita" alt="Marmitex M">
+
+            <h3>Marmitex M – 650g</h3>
+
+            <p class="descricao">
+                Arroz branco ou refogado<br>
+                Feijão verde, preto ou carioca<br>
+                Macarrão ou macaxeira<br>
+                Farofa ou cuscuz<br>
+                Proteína: coxa de frango, calabresa acebolada,
+                galinha matriz, fígado acebolado ou linguiça toscana<br>
+                Salada verde, vinagrete ou legumes
+            </p>
+
+            <span class="preco">R$ 20,00</span>
+
+            <button class="btn btn-pedido" onclick="abrirModal('marmitex-m')">
+                Pedir
+            </button>
+
+        </article>
+    </div>
+</section>
+<!-- MODAL DO PEDIDO -->
+<div id="modal-pedido" class="modal" aria-hidden="true" role="dialog" tabindex="-1">
+    <div class="modal-content" role="document" tabindex="0">
+
+        <button class="close" onclick="fecharModal()" type="button" aria-label="Fechar">&times;</button>
+
+        <h2 id="modal-titulo"></h2>
+
+        <p id="modal-descricao"></p>
+
+        <h3>Opções</h3>
+        <div id="modal-opcoes"></div>
+
+        <h3>Preço</h3>
+        <p id="modal-preco"></p>
+
+        <button class="btn btn-enviar" onclick="adicionarAoCarrinho()" type="button">Adicionar ao Carrinho</button>
+    </div>
+</div>
+    <!-- LOCALIZAÇÃO -->
+    <section id="localizacao" class="secao">
+        <h2 class="titulo-secao">Localização</h2>
+
+        <iframe width="100%" height="400" style="border:0; border-radius: var(--radius);" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.346569493456!2d-39.444673!3d-7.4918539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a1d0b3fc6c4a78%3A0x4e617907d5e73455!2sR.%20Ver.%20Batista%20Dandor%2C%20450%20-%20Sol%20Nascente%2C%20Brejo%20Santo%20-%20CE%2C%2063260-000!5e0!3m2!1spt-BR!2sbr!4v1697041000000!5m2!1spt-BR!2sbr">
+        </iframe>
+        <br>
+        <br>
+
+        <button class="btn btn-local" onclick="abrirMaps()">Abrir no Google Maps</button>
+
+    </section>
+    <!-- SOBRE -->
+    <section id="sobre" class="secao">
+        <h2 class="titulo-secao">Sobre Nós</h2>
+        <p>Somos um restaurante especializado em comida regional, oferecendo pratos frescos e saborosos todos os
+            dias.<br>
+            Também trabalhamos com marmitas, entregas e encomendas para eventos.</p>
+    </section>
+    <div class="img">
+        <img src="https://i.pinimg.com/736x/b9/59/54/b95954524a02f25d13fb4333890d8b32.jpg" class="zap" alt="WhatsApp"
+            onclick="abrirZap()">
+        <img src="https://i.pinimg.com/1200x/c7/79/9c/c7799c0b488fa6afb0dece611924409f.jpg" class="insta"
+            alt="Instagram" onclick="abrirInsta()">
+    </div>
+
+    <!-- CONTATO -->
+    <footer id="contato">
+        <h2>Contato & Pedidos</h2>
+
+        <p>WhatsApp: <strong>(88) 98115-4043</strong></p>
+        <p>Endereço: R. Ver. Batista Dandor, 450 - Sol Nascente, Brejo Santo - CE</p>
+        <p>Funcionamento: Seg à Sex, das 9h às 16h</p>
+
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="javascript.js"></script>
+
+</body>
+
+</html>
