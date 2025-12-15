@@ -80,4 +80,6 @@ This project includes:
 ![Build & Deployment](https://github.com/joel-rian/Marmitas-fit/actions/workflows/deploy.yml/badge.svg?branch=main)
 ![Docker Ready](https://img.shields.io/badge/Docker-ready-blue)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=marmitas-fit&style=for-the-badge)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/joel-rian/Marmitas-fit)
