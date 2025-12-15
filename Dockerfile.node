@@ -1,0 +1,17 @@
+# Use Node.js as base
+FROM node:20
+
+# Define working directory
+WORKDIR /app
+
+# Copy package files first
+COPY package*.json ./
+
+# Install dependencies (including Jest)
+RUN npm install
+
+# Copy all files
+COPY . .
+
+# Run tests when container starts
+CMD ["npm", "test"]
