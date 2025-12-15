@@ -1,0 +1,12 @@
+{
+  "name": "marmitas-fit",
+  "version": "1.0.0",
+  "description": "Landing page for Marmitas Fit",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^30.2.0"
+  }
+}
