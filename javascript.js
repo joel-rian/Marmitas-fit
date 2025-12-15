@@ -385,17 +385,17 @@ window.onclick = function(event) {
 
 function abrirMaps() {
     window.open(
-        "https://www.google.com/maps/place/Dona+Alba+Refei%C3%A7%C3%B5es/@-7.4831335,-38.9786997,18z/data=!4m16!1m9!3m8!1s0x7a13f018e93e7db:0xf2250fd5080faf93!2zRG9uYSBBbGJhIFJlZmVpw6fDtWVz!8m2!3d-7.4832134!4d-38.9779953!9m1!1b1!16s%2Fg%2F11qn61zk57!3m5!1s0x7a13f018e93e7db:0xf2250fd5080faf93!8m2!3d-7.4832134!4d-38.9779953!16s%2Fg%2F11qn61zk57?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
+        "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15823.152486299416!2d-38.98647429171143!3d-7.488631857126662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1765759870218!5m2!1spt-BR!2sbr",
         "_blank"
     );
 }
 
 function abrirZap() {
-    window.open("https://wa.me/5588981154043", "_blank");
+    window.open("", "_blank");
 }
 
 function abrirInsta() {
-    window.open("https://www.instagram.com/donaalbacomida/", "_blank");
+    window.open("", "_blank");
 }
 
 function abrirModalEvento() {
