@@ -77,7 +77,7 @@ This project includes:
 - 🧪 Jest for automated testing
 - 🚀 GitHub Pages for hosting
 
-![Build and Deployment](https://github.com/joel-rian/Marmitas-fit/actions/workflows/pages-build-deployment/badge.svg?branch=main)
+![Build & Deployment](https://github.com/joel-rian/Marmitas-fit/actions/workflows/deploy.yml/badge.svg?branch=main)
 ![Docker Ready](https://img.shields.io/badge/Docker-ready-blue)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 
