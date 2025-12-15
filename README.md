@@ -69,3 +69,15 @@ I learned how to **structure and publish production-ready front-end projects**, 
 **Yerijhon Rian**  
 Full-Stack Developer | AI & Automation for Restaurants  
 🔗 [LinkedIn](https://www.linkedin.com/in/yerijhonrian) • 🌐 [Portfolio](https://yerijhonjoelriandev.online)
+
+## 🧱 DevOps Setup
+This project includes:
+- 🐳 Docker for local and production builds
+- ⚙️ GitHub Actions for CI/CD automation
+- 🧪 Jest for automated testing
+- 🚀 GitHub Pages for hosting
+
+![CI/CD](https://github.com/joel-rian/Marmitas-fit/actions/workflows/deploy.yml/badge.svg)
+![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+
